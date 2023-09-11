@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bitter&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration-line: none;
+    list-style: none;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.input-box {
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4.5%;
+}
+
+.input-box label {
+    display: flex;
+    color: #525252;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-box input {
+    outline: none;
+    padding: 8px;
+    border: solid 1px #4567a5;
+}
+
+.input-box textarea {
+    outline: none;
+    border: #4567a5 solid 1px;
+    resize: none;
+}
+
+.input-box input,
+.input-box textarea {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    color: #525252;
+}
+
+select {
+    height: 40px;
+    color: #525252;
+    font-size: 1rem;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    padding-left: 14px;
+    outline: none;
+}
+
+select option {
+    color: #525252;
+    font-size: 1rem;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+}
+
+.input-box .div-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22vw;
+    height: 15.5vh;
+    background-color: #cfe4fb;
+    border: solid 1px #4567a5;
+    margin-top: 42px;
+}
+
+.input-box .div-image .image {
+    width: 6rem;
+    height: 6rem;
+}
+
+.input-box .div-image .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#nome,
+#tipoVaga {
+    width: 30vw;
+}
+
+#quantidadeVagas {
+    width: 30vw;
+}
+
+#periodo,
+#dataInicio,
+#horario,
+#cep,
+#logradouro,
+#bairro,
+#cidade,
+#uf,
+#comp,
+#pais {
+    width: 19vw;
+}
+
+#num {
+    width: 8vw;
+}
+
+
+
+#desc {
+    width: 515px;
+    height: 124px;
+    overflow: hidden;
+}
+
+#tipoVaga,
+#habilidade,
+#causas,
+#periodo
+ {
+    border: 1px solid #4567a5;
+}
+
+#tipoVaga, #periodo {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    background-image: url("../../img/seta.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;
+}
+
+#label {
+    border: solid 1px #4567a5;
+    background-color: #cfe4fb;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#label:hover {
+    background-color: #4567a5;
+    color: #fff;
+}
+
+#foto {
+    display: none;
+}
+
+#desc {
+    width: 63vw;
+    height: 15.5vh;
+    overflow-y: scroll 2px;
+    padding: 5px;
+    /* height="87px" width="503px"*/
+}
+
+
+/* BOTÃO */
+.continue-button {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.continue-button button {
+    background-color: #4567a5;
+    border: 1px solid #4567a5;
+    border-radius: 0.5rem;
+    width: 10rem;
+    height: 2.5rem;
+    cursor: pointer;
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: poppins, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.continue-button button:hover {
+    background-color: #fff;
+    color: #4567a5;
+}
+
+
+/* CAUSAS E HABILIDADES */
+.box-filtro-causas {
+    position: relative;
+}
+
+.filtro-causas,
+.filtro-habilidade {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    width: 30vw;
+    height: 2.5rem;
+    padding: 8px;
+    border: solid 1px #4567a5;
+    text-align: center;
+    font-family: poppins, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #525252;
+    overflow: hidden;
+    white-space: nowrap;
+
+    background-image: url("../../img/seta.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;
+}
+
+.box-causas,
+.box-habilidade {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    /* min-width: 30vw;
+    max-height: 15.3rem; */
+    width: 30vw;
+    height: 9rem;
+    border: 1px solid #4567a5;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    position: absolute;
+    top: 6.1rem;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+.box-habilidade {
+    z-index: 2;
+}
+
+
+/* SCROLL */
+.box-causas::-webkit-scrollbar,
+.box-habilidade::-webkit-scrollbar {
+    width: 11px;
+}
+
+.box-causas::-webkit-scrollbar-track,
+.box-habilidade::-webkit-scrollbar-track {
+    background: #dce5f7;
+    border-radius: 0.8rem;
+}
+
+.box-causas::-webkit-scrollbar-thumb,
+.box-habilidade::-webkit-scrollbar-thumb {
+    background-color: #4567a5;
+    border-radius: 20px;
+    border: 2px solid #dce5f7;
+    transition: all 0.5s ease;
+}
+
+
+.box-causas-checkbox,
+.box-habilidade-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 2rem;
+}
+
+.box-causas-checkbox label,
+.box-habilidade-checkbox label {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #525252;
+}
+
+
+/* ESTILIZANDO CHECKBOX */
+#causas[type="checkbox"],
+#habilidade[type="checkbox"] {
+    /* ZERAR CONFIGURAÇÃO PADRÃO */
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid #525252;
+    outline: none;
+    cursor: pointer;
+}
+
+#causas[type="checkbox"]:checked::before,
+#habilidade[type="checkbox"]:checked::before {
+    content: '\2713';
+    display: block;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #4567a5;
+    text-align: center;
+
+    line-height: 15px;
+    font-size: 13px;    
+}
+
+
+
+
+
+
+
+
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-conteudo {
+    background-color: #fff;
+    margin: 20% auto;
+    padding: 35px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    max-width: 603px;
+}
+
+.modal-titulo {
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+}
+
+.modal-texto {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-align: justify;
+    margin-top: 2rem;
+    line-height: 175%;
+}
+
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.footer-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-modal input {
+    width: 30rem;
+    padding: 8px;
+    font-size: 14px;
+    font-family: poppins, sans-serif;
+    color: #000000;
+    outline: none;
+    border: #4567a5 1px solid;
+    border-radius: 5px;
+}
+
+.footer-modal input::placeholder {
+    font-size: 14px;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    color: #525252;
+}
+
+/* Estilo do botão */
+#meuBotao {
+    background-color: #4567a5;
+    padding: 1.5%;
+    width: 12.2rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    border: 1px solid #4567a5;
+    font-family: poppins, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+#meuBotao:hover {
+    color: #4567a5;
+    background-color: #fff;
+    border: 1px solid #4567a5;
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+/*FORMULARIO*/
+@media (max-width: 1048px) {
+
+    #nome,
+    #tipoVaga,
+    .filtro-causas,
+    .filtro-habilidade,
+    #quantidadeVagas,
+    #log,
+    .box-habilidade,
+    .box-causas {
+        width: 33vw;
+    }
+
+    #bairro,
+    #logradouro,
+    #cidade,
+    #pais,
+    #comp,
+    #uf,
+    #periodo,
+    #dataInicio,
+    #horario,
+    #cep {
+        width: 20.9vw;
+    }
+
+    #num {
+        width: 8.6vw;
+    }
+
+    #desc {
+        width: 68.6vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .input-group {
+        width: 100%;
+    }
+
+    .input-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #num,
+    #bairro,
+    #cep,
+    #cidade,
+    #pais,
+    #comp,
+    #uf,
+    #desc,
+    #nome,
+    #logradouro,
+    #tipoVaga,
+    .filtro-habilidade,
+    .filtro-causas,
+    #periodo,
+    #dataInicio,
+    #horario,
+    #quantidadeVagas,
+    .box-causas,
+    .box-habilidade {
+        width: 60vw;
+    }
+
+    .input-box .div-image {
+        border: none;
+        background-color: #fff;
+        width: 20vw;
+    }
+
+    .input-box .div-image .image img {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 556px) {
+
+    #num,
+    #bairro,
+    #cep,
+    #cidade,
+    #pais,
+    #comp,
+    #uf,
+    #desc,
+    #nome,
+    #logradouro,
+    #tipoVaga,
+    .filtro-habilidade,
+    .filtro-causas,
+    #periodo,
+    #dataInicio,
+    #horario,
+    #quantidadeVagas,
+    .box-causas,
+    .box-habilidade {
+        width: 70vw;
+    }
+}
+
+/* @media (max-width: 450px){
+    .container{
+        width: 100%;
+        height: auto;
+    }
+    .input-box{
+        display: flex;
+        flex-direction: column;
+    }
+    #num,#bairro, #cep, #cidade, #pais, #comp, #uf, #foto, #desc, #nome, #email, #telefone, #telefone-2, #log, #label{
+        width: 50vw;
+    }
+    
+} */

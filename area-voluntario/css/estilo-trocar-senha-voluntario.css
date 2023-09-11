@@ -1,0 +1,121 @@
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #4567a5;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px #cfe6b4;
+    padding: 50px;
+    width: 390px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-box {
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 170%;
+}
+
+.input-box label {
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 14px;
+    margin-bottom: 5%;
+}
+
+.input-box input {
+    border: 1px solid #cf8a3f;
+    padding: 8px;
+    outline: none;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    color: #525252;
+}
+
+.input-box small {
+    padding-top: 3%;
+    font-family: poppins, sans-serif;
+    color: #525252;
+}
+
+.input-box input::placeholder {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    padding-left: 4%;
+}
+
+.continue-button
+{
+    display: flex;
+    justify-content: center;
+}
+
+.continue-button button {
+    width: 10rem;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    margin-top: 1.2rem;
+    background-color: #cf8a3f;
+    border: 1px solid #cf8a3f;
+    transition: all 0.5s ease;
+    color: #fff;
+    font-family: poppins, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #fff;
+    color: #cf8a3f;
+}
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 453px)
+{
+    .card
+    {
+        width: auto;
+        border-radius: 0;
+        padding: 0;
+        height: 386px;
+    }
+    form
+    {
+        width: 80%;
+    }
+    .input-group
+    {
+        gap: 2rem;
+    }
+    .input-box
+    {
+        width: 100%;
+        margin: 0;
+    }
+    .continue-button button 
+    {
+        margin-top: 2rem;
+    }
+   
+}

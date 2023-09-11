@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bitter:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap');
+
+
+/* *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body
+{
+    overflow-x: hidden;
+    min-height: 150vh;
+} */
+
+.fundo 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+} 
+
+.fundo-circulo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 47rem;
+    background-color: #beeaf1; 
+    /* z-index: 1; */
+    /* position: fixed; */
+    position: relative;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.fundo-titulo
+{
+    font-family: acme, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #08113b;
+    position: absolute;
+    margin-top: 2rem;
+}
+
+.corta-coracao
+{
+    position: absolute;
+    z-index: 9;
+    width: 460px;
+    height: 460px;
+    margin: 7rem 1rem 0rem 0rem;
+    border-radius: 50%;
+    overflow: hidden;
+    /* background-color: #2a599e; */
+}
+
+.circulo
+{
+    width: 510px;
+    height: 510px;
+    margin-top: 5rem;
+    background-image: radial-gradient(rgba(255, 255, 0, 0)0 250px, #beeaf1 250px 100%);
+    background-position: center;
+    z-index: 8;
+}
+
+.sombra-circulo
+{
+    position: absolute;
+    z-index: 7;
+    width: 460px;
+    height: 460px;
+    margin: 7rem 1rem 0rem 0rem;
+    border-radius: 50%;
+    background-color: #ffecd9;
+    /* -webkit-mask-image: radial-gradient(circle at center, transparent 0, transparent 150px, black 150px);
+    mask-image: radial-gradient(circle at center, transparent 0, transparent 150px, black 150px); */
+    box-shadow: inset 0px 0px 10px 5px #b1855b;
+}
+
+/* .box-circulo
+{
+    position: absolute;
+    z-index: 9;
+    width: 460px;
+    height: 460px;
+    margin: 7rem 1rem 0rem 0rem;
+    border-radius: 50%;
+    overflow: hidden;
+    /* background-color: #2a599e; 
+} */
+
+
+.coracoes
+{
+    position: absolute;
+    z-index: 8;
+    /* bottom: 0; */
+}
+
+.box-img-coracao
+{
+    width: 65px;
+    height: 65px;
+    transition: all 0.5s ease;
+    margin-top: 32rem;
+    position: absolute;
+}
+
+.box-img-coracao img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.box-img
+{
+    width: 485px;
+    height: 485px;
+    background-image: url("../img/mundo-2.png");
+    background-size: cover;
+    background-position: center;
+    margin: 6.3rem 0.5rem 0rem 0rem;
+    position: absolute;
+    z-index: 7;
+    animation: girando 10s linear infinite;
+}
+
+@keyframes girando
+{
+    0%
+    {
+        transform: rotate(0);
+    }
+    100% 
+    {
+		transform: rotate(360deg);
+	}
+}
+
+
+.img-maos
+{
+    position: absolute;
+    background-image: url("../img/maos.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 690px;
+    height: 460px;
+    bottom: -12rem;
+    z-index: 10;
+    transition: all 1s ease;
+}
+
+.container-2-botao
+{
+    background-color: #2a599e;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #2a599e;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+
+    font-family: poppins, sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    z-index: 12;
+}
+
+.container-2-botao:hover
+{
+    background-color: #fff;
+    color: #2a599e;
+}
+
+
+
+.box-cards
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.card
+{
+    position: absolute;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: #fff;
+    width: 30rem;
+    /* height: 27rem; */
+    border-radius: 1rem;
+    padding-bottom: 1.5rem;
+    opacity: 0;
+    transition: all 0.5s ease;
+    border: 1px solid #2a599e;
+    /* margin-top: 2rem; */
+    box-shadow: 5px 5px 5px #72b5cf;
+}
+
+.card-box-icon
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1rem 1.3rem 0rem 0rem;
+}
+
+.card i
+{
+    font-size: 18px;
+    color: #525252;
+    cursor: pointer;
+}
+
+.card h1
+{
+    font-family: acme, sans-serif;
+    font-size: 30px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.card p
+{
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    text-align: justify;
+    padding: 0rem 3rem 1.5rem 3rem;
+}
+
+.card-link
+{
+    font-family: bitter, serif;
+    font-size: 15px;
+    color: #303ca8;
+    font-weight: 500;
+    text-decoration-line: none;
+    transition: all 0.5s ease;
+}
+
+.card-link:hover
+{
+    color: #cc8746;
+}
+
+@media (max-width: 929px)
+{
+    .card p
+    {
+        font-size: 14px;
+        line-height: 28px;
+        padding: 0rem 3rem 2rem 3rem;
+    }
+}
+
+@media (max-width: 790px) 
+{
+    .fundo-circulo
+    {
+        height: 44rem;
+    }
+    .fundo-titulo 
+    {
+        font-size: 35px;
+    }
+    .corta-coracao, .sombra-circulo
+    {
+        width: 430px;
+        height: 430px;
+    }
+    .circulo
+    {
+        width: 480px;
+        height: 480px;
+    }
+    .box-img
+    {
+        width: 455px;
+        height: 455px;
+    }
+    .img-maos
+    {
+        width: 590px;
+        height: 428px;
+    }
+}
+
+@media (max-width: 656px) 
+{
+    .fundo-circulo
+    {
+        height: 42rem;
+    }
+    .fundo-titulo 
+    {
+        font-size: 31px;
+    }
+    .corta-coracao, .sombra-circulo
+    {
+        width: 395px;
+        height: 395px;
+    }
+    .circulo
+    {
+        width: 445px;
+        height: 445px;
+    }
+    .box-img
+    {
+        width: 420px;
+        height: 420px;
+    }
+    .img-maos
+    {
+        width: 530px;
+        height: 402px;
+    }
+    .container-2-botao
+    {
+        width: 9.2rem;
+        height: 2.3rem;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 573px) 
+{
+    .fundo-circulo
+    {
+        height: 38rem;
+    }
+    .fundo-titulo 
+    {
+        font-size: 27px;
+        margin: 2rem;
+        text-align: center;
+    }
+    .corta-coracao, .sombra-circulo
+    {
+        width: 329px;
+        height: 329px;
+    }
+    .circulo
+    {
+        width: 365px;
+        height: 365px;
+    }
+    .box-img
+    {
+        width: 350px;
+        height: 350px;
+    }
+    .img-maos
+    {
+        position: absolute;
+        background: url("../img/maos-2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 430px;
+        height: 389px;
+        bottom: -12rem;
+        z-index: 10;
+        transition: all 1s ease;
+    }
+    .container-2-botao
+    {
+        width: 8.2rem;
+        height: 2rem;
+        font-size: 15px;
+    }
+    .box-img-coracao
+    {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* CARD */
+    .card h1
+    {
+        font-size: 24px;
+    }
+    .card p
+    {
+        font-size: 13px;
+        line-height: 24px;
+        padding: 0rem 2rem 2rem 2rem;
+    }
+    .card-link
+    {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 512px)
+{
+    .card
+    {
+        width: 24rem;
+        height: 32rem;
+    }
+} 
+
+@media (max-width: 452px)
+{
+    .fundo-circulo
+    {
+        height: 36rem;
+    }
+    .sombra-circulo
+    {
+        margin: 7rem 0.4rem 0rem 0rem;    
+    }
+    .corta-coracao,  .box-img, .sombra-circulo
+    {
+        width: 300px;
+        height: 300px;
+    }
+    .box-img
+    {
+        margin: 7rem 0rem 0rem 0rem;
+    }
+    .container-2-botao
+    {
+        margin-top: 0;
+    }
+    .img-maos
+    {
+        width: 367px;
+        height: 356px;
+    }
+}
+
+@media (max-width: 452px)
+{
+    .card
+    {
+        width: 100%;
+        height: auto;
+    }
+    .card p
+    {
+        font-size: 12px;
+        line-height: 21px;
+        padding: 0rem 1.4rem 2rem 1.4rem;
+    }
+}
+
+@media (max-width: 396px)
+{
+    .img-maos
+    {
+        position: absolute;
+        background: url("../img/maos-3.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 367px;
+        height: 356px;
+        bottom: -12rem;
+        z-index: 10;
+        transition: all 1s ease;
+    }
+}

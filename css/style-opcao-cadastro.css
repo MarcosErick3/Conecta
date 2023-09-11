@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Bitter:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/*Main*/
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+main .container a:hover{
+  color: #c48139;
+}
+
+main .container a :active{
+  color: #c48139;
+}
+
+.image-header
+{
+  background-image: url("../img/cima.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20rem;
+  width: 100vw;
+  position: absolute;
+  top: -20rem;
+  transition: all 1s ease;
+  /* margin-bottom: 5rem; */
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  /* margin-top: 7rem; */
+  /* margin-bottom: -1.5rem; */
+}
+
+.container a {
+  color: #4567a5;
+  text-align: center;
+  font-family: bitter, serif;
+  font-size: 12pt;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.titles label{
+  color: #232e61;
+}
+.titles h1 {
+  color: #e29857;
+  font-family: ACME;
+  font-weight: 400;
+  text-align: center;
+  font-size: 23pt;
+}
+
+.titles h3{
+  color: #e29857;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 18px;
+}
+
+.buttons-rows
+{
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+.button-confirm {
+  width: 10rem;
+  height: 2.5rem;
+  border: 1px solid #232e61;
+  background-color: #232e61;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: poppins, sans-serif;
+  color: #ffffff;
+  transition: all 0.5s ease; 
+  cursor: pointer;
+}
+
+/* .buttons-rows button:hover {
+  background-color: #fff;
+  color: #232e61;
+} */
+
+#btn-instituicao:hover
+{
+  background-color: #4567a5;
+  border: 1px solid #4567a5;
+}
+
+#btn-voluntario:hover
+{
+  background-color: #cf8a3f;
+  border: 1px solid #cf8a3f;
+}
+
+.link
+{
+  margin-top: 1rem;
+}
+
+.image-footer
+{
+  background-image: url("../img/baixo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20rem;
+  width: 100vw;
+  position: absolute;
+  bottom: -20rem;
+  transition: all 1s ease;
+}
+
+
+
+/*Responsividade*/
+@media(max-height: 900px)
+{
+  .image-header
+  {
+    height: 11rem;
+  }
+  .image-footer
+  {
+    height: 15rem;
+  }
+}
+
+
+@media (max-width: 533px)
+{
+  .titles h1
+  {
+    font-size: 23px;
+  }
+  .titles h3
+  {
+    font-size: 14px;
+    margin: 1rem;
+  }
+  .buttons-rows
+  {
+    margin-top: 1rem;
+  }
+  .button-confirm
+  {
+    width: 8rem;
+    height: 2.1rem;
+    font-size: 15px;
+  }
+  .container a
+  {
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 320px)
+{
+  .buttons-rows
+  {
+    flex-direction: column;
+  }
+}
